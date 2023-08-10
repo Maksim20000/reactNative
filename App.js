@@ -1,20 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import {Text, View} from 'react-native'
+import {Button} from 'native-base'
+import { registerRootComponent } from "expo";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app! nmnmnxcxcxcasdasdadasd</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+const App = () => {
+    return (
+        <View>
+            <Button light title={'Light'}></Button>
+            <Button primary title={'Primary'}></Button>
+            <Button success  title={'Success'}></Button>
+            <Button info  title={'Info'}></Button>
+            <Button warning  title={'Warning'}></Button>
+            <Button danger  title={'Danger'}></Button>
+            <Button dark  title={'Dark'}></Button>
+        </View>
+    )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+registerRootComponent(App);
+export default App

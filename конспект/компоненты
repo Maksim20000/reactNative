@@ -1,0 +1,19 @@
+1) чтобы писать текст мы используем тэг <Text />
+
+2) чтобы вставлять фото мы пишем
+    <Image source={require('./assets/img/react_native.png')} />
+
+3) Кроссплатформенные: View, Text, Image и другие.
+   Специфичные для каждой платформы, например, DatePickerIOS или DatePickerAndroid.
+
+4) чтобы определить какое программное обеспечение использует пользовательиспользуем
+    Platform.OS === 'ios' ? 40: 100
+    или
+    ...Platform.select({
+                ios: {
+                    backgroundColor: 'red',
+                },
+                android: {
+                    backgroundColor: 'blue',
+                },
+            }),
