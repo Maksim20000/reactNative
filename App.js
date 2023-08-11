@@ -1,21 +1,30 @@
 import React from 'react'
-import {Text, View} from 'react-native'
-import {Button} from 'native-base'
-import { registerRootComponent } from "expo";
+import { ActivityIndicator, StyleSheet, Text, View } from "react-native"
 
-const App = () => {
-    return (
-        <View>
-            <Button light title={'Light'}></Button>
-            <Button primary title={'Primary'}></Button>
-            <Button success  title={'Success'}></Button>
-            <Button info  title={'Info'}></Button>
-            <Button warning  title={'Warning'}></Button>
-            <Button danger  title={'Danger'}></Button>
-            <Button dark  title={'Dark'}></Button>
-        </View>
-    )
+const HellowWorld = () => {
+  return(
+      <Text>
+          Hellow World
+      </Text>
+  )
 }
 
-registerRootComponent(App);
+const App = () => (
+    <View style={[styles.container, styles.horizontal]}>
+        <HellowWorld />
+    </View>
+)
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 2,
+        justifyContent: "center"
+    },
+    horizontal: {
+        flexDirection: "row",
+        justifyContent: "space-around",
+        padding: 10
+    }
+})
+
 export default App

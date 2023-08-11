@@ -17,3 +17,21 @@
                     backgroundColor: 'blue',
                 },
             }),
+
+5) чтобы использовать стили нужно использовть такую структуру
+    StyleSheet - важно импортировать
+    const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            justifyContent: "center"
+        }
+    })
+    а в компоненте
+    style={[styles.container, styles.horizontal]}
+    или
+    const { container, red, bigBlue } = styles
+    style={red}
+
+6) чтобы показывать ползунок загрузке используем
+    <ActivityIndicator size='large' />
+    <ActivityIndicator size="small" color="red" />
